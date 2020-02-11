@@ -1,45 +1,42 @@
 import React from 'react';
 import './App.css';
-import { Column } from '@antv/g2plot'
+import { makeStyles } from '@material-ui/core/styles';
+import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import lightGreen from '@material-ui/core/colors/lightGreen'
+import Graph from './Graph'
+import Icon from './icon.png'
+const useStyles = makeStyles({
+  root: {
+    width: 500,
+    backgroundColor:lightGreen['A700']
+  },
+  img:{
+    maxWidth:'30px',
+  }
+});
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { result: [] };
-  }
-  componentDidMount() {
-    let url = 'https://lab.isaaclin.cn/nCoV/api/area';
-    fetch(url)
-      .then(re => re.json())
-      .then(re => {
-        console.log(re)
-        let data = re.results.map((el) => {
-          if (el.country == '中国') {
-            return { type: el.provinceShortName, value: el.curedCount }
-          }
-          else
-            return;
-        })
-        data = data.filter(el => el !== undefined)
-        console.log(data)
-        const barPlot = new Column("canvas", {
-          data,
-          xField: 'type',
-          yField: 'value',
+function App(props) {
 
-        })
-        barPlot.render();
-        return;
-      })
-      .catch((er) => console.log(er));
-  }
-  render() {
-    return (
-      <div>
-        <div id="canvas" style={{ height: '1500px', width: '100%' }}></div>
-      </div>
-    );
-  }
+  const classes = useStyles();
+  const [value, setValue] = React.useState(0);
+  return (
+    <div>
+      <BottomNavigation
+        value={value}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        className={classes.root}
+      >
+        <BottomNavigationAction label="各省份图表" icon={<img src={Icon} alt="icon" className={classes.img} />} />
+        <BottomNavigationAction label="市级图表" icon={<img src={Icon} alt="icon" className={classes.img} />} />
+        <BottomNavigationAction label="全球图表" icon={<img src={Icon} alt="icon" className={classes.img} />} />
+      </BottomNavigation>
+      <Graph />
+    </div>
+  );
+
 }
 
 export default App;
