@@ -21,13 +21,13 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "http://giorgiopeng.space/NPC-visualization",
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
     ],
-    "homepage":"http://giorgiopeng.space/NPC-visualization",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
