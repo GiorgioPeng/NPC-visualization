@@ -1,19 +1,19 @@
 import React from 'react';
-import { Column } from '@antv/g2plot'
+import { Column, Bar } from '@antv/g2plot'
 
 class Graph extends React.Component {
   constructor(props) {
     super(props);
     this.state = { result: [] };
   }
-  componentDidMount() {
+  componentWillMount() {
     let url = 'https://lab.isaaclin.cn/nCoV/api/area';
     fetch(url)
       .then(re => re.json())
       .then(re => {
         console.log(re)
         let data = re.results.map((el) => {
-          if (el.country == '中国') {
+          if (el.countryName == '中国') {
             return { 省份: el.provinceShortName, value: el.curedCount }
           }
           else
