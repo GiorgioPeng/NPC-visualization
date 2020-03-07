@@ -27,7 +27,7 @@
       "not dead",
       "not op_mini all"
     ],
-    "homepage":"http://giorgiopeng.space/NPC-visualization"
+    "homepage":"http://giorgiopeng.space/NPC-visualization",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
