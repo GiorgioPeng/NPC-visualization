@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/NPC-visualization/static/css/main.d1b05096.chunk.css",
+    "main.js": "/NPC-visualization/static/js/main.1ed8d37d.chunk.js",
+    "main.js.map": "/NPC-visualization/static/js/main.1ed8d37d.chunk.js.map",
+    "runtime-main.js": "/NPC-visualization/static/js/runtime-main.27c8d1be.js",
+    "runtime-main.js.map": "/NPC-visualization/static/js/runtime-main.27c8d1be.js.map",
+    "static/js/2.cd14e639.chunk.js": "/NPC-visualization/static/js/2.cd14e639.chunk.js",
+    "static/js/2.cd14e639.chunk.js.map": "/NPC-visualization/static/js/2.cd14e639.chunk.js.map",
+    "index.html": "/NPC-visualization/index.html",
+    "precache-manifest.df0adeba8d28c4c181b8e64f03bedaf7.js": "/NPC-visualization/precache-manifest.df0adeba8d28c4c181b8e64f03bedaf7.js",
+    "service-worker.js": "/NPC-visualization/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/NPC-visualization/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.cd14e639.chunk.js.LICENSE.txt": "/NPC-visualization/static/js/2.cd14e639.chunk.js.LICENSE.txt",
+    "static/media/icon.png": "/NPC-visualization/static/media/icon.0871d666.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.27c8d1be.js",
+    "static/js/2.cd14e639.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.1ed8d37d.chunk.js"
+  ]
+}
